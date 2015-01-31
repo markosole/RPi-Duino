@@ -1,9 +1,9 @@
 <?php
 
-//if ( stripos( $_SERVER[ 'REQUEST_URI' ], basename( __FILE__ ) ) !== FALSE ) { // TRUE if the script's file name is found in the URL
-//  header( 'HTTP/1.0 403 Forbidden' );
- // die( "<h2>Forbidden! Direct access is not allowed.</h2>" );
-//}
+if ( stripos( $_SERVER[ 'REQUEST_URI' ], basename( __FILE__ ) ) !== FALSE ) { // TRUE if the script's file name is found in the URL
+ header( 'HTTP/1.0 403 Forbidden' );
+  die( "<h2>Forbidden! Direct access is not allowed.</h2>" );
+}
 //***************************
 // 		plugin za izvrsavanje komandi provjere datuma aktivacije i deaktivacije Nodova
 //		Verzija: v0.1.0
@@ -45,12 +45,6 @@ foreach($rows as $row){
 		$identifier	 = $row[command_identifier];	//Komanda aktivacije. Broj tj vrijednost koja se salje Node-u
 		$identifier_off = 9;  //obicni random bez veze broj, pridruzuje se komandi za deaktivaciju uredjaja
 		//$node_number = $row[node_number];    za buducu upotrebu
-		
-		// Funkcija za provjeru i gasenje upaljenih uredjaja u zadano vrijeme
-		
-		
-		
-		
 		
 		if ( $date_off == $date_stamp ) {
 			echo "</br>Ok, vrijeme se poklapa, izvrsavam komandu...";
