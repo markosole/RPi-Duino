@@ -1,9 +1,9 @@
 <?php
 
-//if ( stripos( $_SERVER[ 'REQUEST_URI' ], basename( __FILE__ ) ) !== FALSE ) { // TRUE if the script's file name is found in the URL
-//  header( 'HTTP/1.0 403 Forbidden' );
- // die( "<h2>Forbidden! Direct access is not allowed.</h2>" );
-//}
+if ( stripos( $_SERVER[ 'REQUEST_URI' ], basename( __FILE__ ) ) !== FALSE ) { // TRUE if the script's file name is found in the URL
+ header( 'HTTP/1.0 403 Forbidden' );
+ die( "<h2>Forbidden! Direct access is not allowed.</h2>" );
+}
 //***************************
 // 		plugin za izvrsavanje komandi provjere datuma aktivacije i deaktivacije Nodova
 //		Verzija: v0.1.0
